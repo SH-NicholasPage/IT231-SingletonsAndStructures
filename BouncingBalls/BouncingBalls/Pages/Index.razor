@@ -1,0 +1,20 @@
+﻿@page "/"
+@using BouncingBalls.Lab10TODO
+
+<PageTitle>Index</PageTitle>
+
+@if(timesBBChanged < 3)
+{
+	<div>Making the box bigger in: @(boundaryBoxGrowth.TimeLeft / 1000) sec</div>
+}
+else
+{
+	<div>Box is at max size.</div>
+}
+
+<div id="boundary" style="left: @(renderer.BoundingBox.X); top: @(renderer.BoundingBox.Y)px; width: @(renderer.BoundingBox.Width)px; height: @(renderer.BoundingBox.Height)px;">
+	@foreach(Ball ball in balls)
+	{
+		<div class="ball" style="left: @(ball.position.X)px; top: @(ball.position.Y)px; width: @(ball.size)px; height: @(ball.size)px; background-color: @(ball.color.Name);"></div>
+	}
+</div>
