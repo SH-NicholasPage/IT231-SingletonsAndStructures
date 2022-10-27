@@ -15,7 +15,7 @@ namespace BouncingBalls.Lab10TODO
     {
         public Rectangle BoundingBox { get; private set; } = new Rectangle(10, 10, 200, 200);
 
-        private Renderer() { } //Private constructor so it can't be constructed
+        private Renderer() { } //Private constructor so it can't be constructed outside of this class
 
         public static Renderer GetInstance()
         {
