@@ -1,5 +1,5 @@
 ﻿using BouncingBalls.Client;
-using BouncingBalls.Lab10TODO;
+using BouncingBalls.Lab12TODO;
 using Microsoft.AspNetCore.Components;
 using System.Drawing;
 using System.Numerics;
@@ -10,9 +10,9 @@ namespace BouncingBalls.Pages
 {
     public partial class Index : ComponentBase
     {
-        public List<Ball> balls = new List<Ball>();
-        public Renderer renderer = Renderer.GetInstance();
-        TimerWrapper boundaryBoxGrowth = new TimerWrapper(8000);
+        private List<Ball> balls = [];
+        private readonly Renderer renderer = Renderer.GetInstance();
+        private readonly TimerWrapper boundaryBoxGrowth = new TimerWrapper(8000);
         private int timesBBChanged = 0;
 
         private readonly float callsPerSecond = 30f;
@@ -79,59 +79,34 @@ namespace BouncingBalls.Pages
 
         private Color GenerateRandomColor()
         {
-            switch(Random.Shared.Next(0, 24))
+            return Random.Shared.Next(0, 24) switch
             {
-                case 0:
-                    return Color.Aqua;
-                case 1:
-                    return Color.Black;
-                case 2:
-                    return Color.Blue;
-                case 3:
-                    return Color.Fuchsia;
-                case 4:
-                    return Color.Gray;
-                case 5:
-                    return Color.Green;
-                case 6:
-                    return Color.Lime;
-                case 7:
-                    return Color.Maroon;
-                case 8:
-                    return Color.Navy;
-                case 9:
-                    return Color.Olive;
-                case 10:
-                    return Color.Purple;
-                case 11:
-                    return Color.Red;
-                case 12:
-                    return Color.Silver;
-                case 13:
-                    return Color.Teal;
-                case 14:
-                    return Color.Yellow;
-                case 15:
-                    return Color.Orange;
-                case 16:
-                    return Color.Brown;
-                case 17:
-                    return Color.Azure;
-                case 18:
-                    return Color.Gold;
-                case 19:
-                    return Color.Cyan;
-                case 20:
-                    return Color.DarkRed;
-                case 21:
-                    return Color.Gold;
-                case 22:
-                    return Color.Pink;
-                case 23:
-                    return Color.Wheat;
-            }
-
-            return Color.Black;
+                0 => Color.Aqua,
+                1 => Color.Black,
+                2 => Color.Blue,
+                3 => Color.Fuchsia,
+                4 => Color.Gray,
+                5 => Color.Green,
+                6 => Color.Lime,
+                7 => Color.Maroon,
+                8 => Color.Navy,
+                9 => Color.Olive,
+                10 => Color.Purple,
+                11 => Color.Red,
+                12 => Color.Silver,
+                13 => Color.Teal,
+                14 => Color.Yellow,
+                15 => Color.Orange,
+                16 => Color.Brown,
+                17 => Color.Azure,
+                18 => Color.Gold,
+                19 => Color.Cyan,
+                20 => Color.DarkRed,
+                21 => Color.Gold,
+                22 => Color.Pink,
+                23 => Color.Wheat,
+                _ => Color.Black,
+            };
         }
     }
 }

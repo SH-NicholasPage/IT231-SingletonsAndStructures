@@ -1,7 +1,7 @@
 ﻿using System.Drawing;
 using System.Numerics;
 
-namespace BouncingBalls.Lab10TODO
+namespace BouncingBalls.Lab12TODO
 {
     public struct Ball
     {

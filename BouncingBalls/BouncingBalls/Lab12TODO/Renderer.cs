@@ -9,7 +9,7 @@ using System.Numerics;
 using System.Timers;
 using Timer = System.Timers.Timer;
 
-namespace BouncingBalls.Lab10TODO
+namespace BouncingBalls.Lab12TODO
 {
     public sealed class Renderer
     {
