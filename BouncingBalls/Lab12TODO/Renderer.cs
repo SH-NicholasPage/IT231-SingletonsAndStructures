@@ -24,6 +24,18 @@ namespace BouncingBalls.Lab12TODO
             throw new NotImplementedException();
         }
 
+        public void ModifyBoundingBox(int x, int y, int width, int height)
+        {
+            //TODO: Your code here
+            throw new NotImplementedException();
+        }
+
+        public Ball CreateBall(Vector2 pposition, Vector2 pvelocity, float psize, Color pcolor)
+        {
+            //TODO: Your code here
+            throw new NotImplementedException();
+        }
+
         public List<Ball> PerformBallPhysics(List<Ball> balls)
         {
             //TODO: Your code here
@@ -33,20 +45,22 @@ namespace BouncingBalls.Lab12TODO
             return balls;
         }
 
-        private bool IsBallOutsideXBoundary(Ball ball) => ball.Position.X > BoundingBox.Width - ball.Size || ball.Position.X + BoundingBox.X < BoundingBox.X;
-
-        private bool IsBallOutsideYBoundary(Ball ball) => ball.Position.Y > BoundingBox.Height - ball.Size || ball.Position.Y + BoundingBox.Y < BoundingBox.Y;
-
-        public Ball CreateBall(Vector2 pposition, Vector2 pvelocity, float psize, Color pcolor)
+        private bool IsBallOutsideXBoundary(Ball ball)
         {
-            //TODO: Your code here
-            throw new NotImplementedException();
+            //Right
+            if (ball.Position.X + ball.Size > BoundingBox.Width) return true;
+            //Left
+            if (ball.Position.X + BoundingBox.X < BoundingBox.X) return true;
+            return false;
         }
 
-        public void ModifyBoundingBox(int x, int y, int width, int height)
+        private bool IsBallOutsideYBoundary(Ball ball)
         {
-            //TODO: Your code here
-            throw new NotImplementedException();
+            //Bottom
+            if (ball.Position.Y + ball.Size > BoundingBox.Height) return true;
+            //Top
+            if (ball.Position.Y + BoundingBox.Y < BoundingBox.Y) return true;
+            return false;
         }
     }
 }
