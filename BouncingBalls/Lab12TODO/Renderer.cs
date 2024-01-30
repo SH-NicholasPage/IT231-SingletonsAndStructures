@@ -3,14 +3,13 @@
 * South Hills Username: [YOUR SOUTH HILLS USERNAME HERE]
 */
 
-using Microsoft.AspNetCore.Components.RenderTree;
 using System.Drawing;
 using System.Numerics;
-using System.Timers;
-using Timer = System.Timers.Timer;
 
 namespace BouncingBalls.Lab12TODO
 {
+    //The Renderer is a singleton.
+    //Sealed classes cannot be inherited.
     public sealed class Renderer
     {
         //                X    Y    width   height
