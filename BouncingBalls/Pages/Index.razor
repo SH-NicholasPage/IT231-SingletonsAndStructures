@@ -15,6 +15,6 @@ else
 <div id="boundary" style="left: @(renderer.BoundingBox.X); top: @(renderer.BoundingBox.Y)px; width: @(renderer.BoundingBox.Width)px; height: @(renderer.BoundingBox.Height)px;">
 	@foreach(Ball ball in balls)
 	{
-		<div class="ball" style="left: @(ball.position.X)px; top: @(ball.position.Y)px; width: @(ball.size)px; height: @(ball.size)px; background-color: @(ball.color.Name);"></div>
+		<div class="ball" style="left: @(ball.Position.X)px; top: @(ball.Position.Y)px; width: @(ball.Size)px; height: @(ball.Size)px; background-color: @(ball.Color.Name);"></div>
 	}
 </div>

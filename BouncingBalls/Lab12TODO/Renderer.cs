@@ -27,9 +27,9 @@ namespace BouncingBalls.Lab12TODO
         public List<Ball> PerformBallPhysics(List<Ball> balls)
         {
             //TODO: Your code here
-            //If a ball is outside of the X bounds, flip the X velocity
-            //If a ball is outside of the Y bounds, flip the Y velocity
-            //Ensure no ball is outside of the boundary
+            //If a ball is outside of the X bounds, flip the X velocity.
+            //If a ball is outside of the Y bounds, flip the Y velocity.
+            //Ensure no ball is outside of the boundary.
             return balls;
         }
 
@@ -45,8 +45,8 @@ namespace BouncingBalls.Lab12TODO
             throw new NotImplementedException();
         }
 
-        private bool IsBallOutsideXBoundary(Ball ball) => ball.position.X > BoundingBox.Width - ball.size || ball.position.X + BoundingBox.X < BoundingBox.X;
+        private bool IsBallOutsideXBoundary(Ball ball) => ball.Position.X > BoundingBox.Width - ball.Size || ball.Position.X + BoundingBox.X < BoundingBox.X;
 
-        private bool IsBallOutsideYBoundary(Ball ball) => ball.position.Y > BoundingBox.Height - ball.size || ball.position.Y + BoundingBox.Y < BoundingBox.Y;
+        private bool IsBallOutsideYBoundary(Ball ball) => ball.Position.Y > BoundingBox.Height - ball.Size || ball.Position.Y + BoundingBox.Y < BoundingBox.Y;
     }
 }
