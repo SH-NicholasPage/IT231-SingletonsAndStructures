@@ -28,7 +28,9 @@ namespace BouncingBalls.Lab12TODO
         public List<Ball> PerformBallPhysics(List<Ball> balls)
         {
             //TODO: Your code here
-            throw new NotImplementedException();
+            //If a ball is outside of the X bounds, flip the X velocity
+            //If a ball is outside of the Y bounds, flip the Y velocity
+            //Ensure no ball is outside of the boundary
             return balls;
         }
 
