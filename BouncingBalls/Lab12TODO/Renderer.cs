@@ -33,6 +33,10 @@ namespace BouncingBalls.Lab12TODO
             return balls;
         }
 
+        private bool IsBallOutsideXBoundary(Ball ball) => ball.Position.X > BoundingBox.Width - ball.Size || ball.Position.X + BoundingBox.X < BoundingBox.X;
+
+        private bool IsBallOutsideYBoundary(Ball ball) => ball.Position.Y > BoundingBox.Height - ball.Size || ball.Position.Y + BoundingBox.Y < BoundingBox.Y;
+
         public Ball CreateBall(Vector2 pposition, Vector2 pvelocity, float psize, Color pcolor)
         {
             //TODO: Your code here
@@ -44,9 +48,5 @@ namespace BouncingBalls.Lab12TODO
             //TODO: Your code here
             throw new NotImplementedException();
         }
-
-        private bool IsBallOutsideXBoundary(Ball ball) => ball.Position.X > BoundingBox.Width - ball.Size || ball.Position.X + BoundingBox.X < BoundingBox.X;
-
-        private bool IsBallOutsideYBoundary(Ball ball) => ball.Position.Y > BoundingBox.Height - ball.Size || ball.Position.Y + BoundingBox.Y < BoundingBox.Y;
     }
 }
