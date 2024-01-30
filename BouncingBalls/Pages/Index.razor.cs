@@ -15,6 +15,7 @@ namespace BouncingBalls.Pages
         private readonly TimerWrapper boundaryBoxGrowth = new TimerWrapper(8000);
         private int timesBBChanged = 0;
 
+        //Physics calls per second. Increasing this could make movement smoother.
         private readonly float callsPerSecond = 30f;
 
         protected override async Task OnInitializedAsync()
@@ -77,7 +78,8 @@ namespace BouncingBalls.Pages
             }
         }
 
-        private Color GenerateRandomColor()
+        //Static because it does not access any instance members.
+        private static Color GenerateRandomColor()
         {
             return Random.Shared.Next(0, 24) switch
             {
